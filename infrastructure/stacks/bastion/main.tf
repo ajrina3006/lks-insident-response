@@ -89,7 +89,7 @@ module "bastion" {
   key_name              = var.bastion_key_name
   security_group_ids    = [module.bastion_sg.security_group_id]
   subnet_id             = data.terraform_remote_state.base.outputs.public_subnet_1_id
- # iam_instance_profile  = "LabInstanceProfile"
+  iam_instance_profile  = "LabInstanceProfile"
   source_dest_check     = false 
   root_volume_size      = var.bastion_root_volume_size
   root_volume_type      = var.bastion_root_volume_type
