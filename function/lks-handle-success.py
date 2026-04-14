@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 from botocore.exceptions import ClientError
 
-def notif_success_handler(event, context):
+def lambda_handler(event, context):
     """
     Handle successful incident resolution - update incident status and send notifications
     
